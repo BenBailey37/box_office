@@ -1,36 +1,36 @@
 #Judson Box Office
 print("Welcome to the Judosn Box Office")
-total_sales = 0
+total_sales = 0.00
 
 #Ask for costomer's name
-name = input("What is your name? ")
-age = int(input("Age: "))
-#ask how many tickets
-quantity = int(input("How many tickets? "))
+name = input("Costomer name (or done):  ")
+while name != "done":
+	age = int(input("Age: "))
+	quantity = int(input("How many tickets? "))
 
 #pricing: under 5 free, under 18, $8, 65+ $10, else $12
-if age < 5:
-        price = 0.00
-elif age < 18:
-        price = 8.00
-elif age >= 65:
-        price = 10.00
-else:
-        price = 12.00
+	if age < 5:
+		price = 0.00
+	elif age < 18:
+        	price = 8.00
+	elif age >= 65:
+        	price = 10.00
+	else:
+        	price = 12.00
 
-print(f"Hello, {name}")
-#show ticket of price
-for ticket in range(1, quantity + 1):
-        print(f"Ticket {ticket} of {quantity}: ${price:.2f}")
+	print(f"Hello, {name}")
+	for ticket in range(1, quantity + 1):
+        	print(f"Ticket {ticket} / {quantity}: ${price:.2f}")
 
 #name pays subtotal
-subtotal = price * quantity
-print(f"{name} pays ${subtotal:.2f}")
-
+	subtotal = price * quantity
+	subtotal = int(subtotal)
+	print(f"{name} pays ${subtotal:.2f}")
+	name = input("Costomer name (or done):  ")
+#has problem!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 total_sales = (total_sales + subtotal)
+print(f"Closed. Total sales: ${total_sales:.2f}")
 
-#set total sales = 0 DONE
-#ask first name (or done)
 #while name is not done:
 	#ask age, quantity, deside price
 	#show hello; for tickets show line
