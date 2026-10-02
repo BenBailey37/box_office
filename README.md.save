@@ -28,11 +28,11 @@ while name != "done":
 #name pays subtotal
 	subtotal = price * quantity
 	subtotal = int(subtotal)
-	total_sales = total_sales + subtotal
 	print(f"{name} pays ${subtotal:.2f}")
 	name = input("Costomer name (or done):  ")
 #has problem!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-print(f"Closed. Total sales: ${total_sales:.2f}")
+total_sales = total_sales + subtotal
+print(f"Closed. total sales: ${total_sales:.2f}")
 
 #while name is not done:
 	#ask age, quantity, deside price
@@ -42,4 +42,3 @@ print(f"Closed. Total sales: ${total_sales:.2f}")
 	#show name pays subtotal
 	#ask the next name (or done)
 #show closed. total sales
-
