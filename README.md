@@ -31,8 +31,12 @@ while name != "done":
 	total_sales = total_sales + subtotal
 	print(f"{name} pays ${subtotal:.2f}")
 	name = input("Costomer name (or done):  ")
+	costomers.append(name)
+	sales.append(subtotal)
 #has problem!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 print(f"Closed. Total sales: ${total_sales:.2f}")
+print("Costomers served: ", len(costomers))
+print(sales)
 
 #while name is not done:
 	#ask age, quantity, deside price
